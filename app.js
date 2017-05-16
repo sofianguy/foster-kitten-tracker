@@ -1,11 +1,10 @@
 var express = require('express');
 var path = require('path');
 var app = express();
-
-// app.use(express.static(path.join(__dirname, 'views')));
+var {home} = require('./views/home.html.js');
 
 app.get('/', function (req, res) {
-  res.sendFile(path.join(__dirname + '/views/home.html'));
+  res.end(home());
 });
 
 app.listen(3000, function () {
