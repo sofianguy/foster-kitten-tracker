@@ -7,6 +7,7 @@ exports.cat = (name) => `
   </head>
 
   <body>
+    <img src="" alt="cat ${name}">
     <h1>I'm ${name}</h1>
     <table>
       <tr>
