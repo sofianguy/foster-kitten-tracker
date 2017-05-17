@@ -4,6 +4,8 @@ var app = express();
 var {home} = require('./views/home.html.js');
 var {cat} = require('./views/cat.html.js');
 
+app.use('/styles', express.static(__dirname + '/styles'));
+
 app.get('/', function (req, res) {
   res.end(home());
 });

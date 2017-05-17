@@ -3,6 +3,7 @@ exports.home = () => `
   <html>
   <head>
     <title>foster kitten tracker</title>
+    <link rel="stylesheet" type="text/css" href="/styles/main.css">
   </head>
 
   <body>

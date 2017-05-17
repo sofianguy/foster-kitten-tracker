@@ -3,6 +3,7 @@ exports.cat = (name) => `
   <html>
   <head>
     <title>${name}</title>
+    <link rel="stylesheet" type="text/css" href="/styles/main.css">
   </head>
 
   <body>
