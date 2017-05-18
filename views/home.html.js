@@ -7,6 +7,8 @@ exports.home = () => `
   </head>
 
   <body>
+    <h1>Welcome!</h1>
+    <h1>pick a kitten:</h1>
     <a href="/cat/hedwig">Hedwig</a>
     <a href="/cat/pigwidgeon">Pigwidgeon</a>
     <a href="/cat/errol">Errol</a>
