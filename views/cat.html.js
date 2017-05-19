@@ -4,8 +4,9 @@ exports.cat = (name) => `
   <head>
     <title>${name}</title>
     <link rel="stylesheet" type="text/css" href="/styles/main.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   </head>
 
   <body>
@@ -13,17 +14,54 @@ exports.cat = (name) => `
     <img src="" alt="cat ${name}">
     <h1>I'm ${name}</h1>
 
+    <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Add new info</button>
     <!-- FORM TO ADD GROWTH INFO: -->
-    <form action="/cat/${name}">
-      <input type="date" name="date" placeholder="05/10/2017">
-      <input type="text" name="age" placeholder="6 weeks">
-      <input type="text" name="weight" placeholder="700 g">
-      <input type="text" name="milk" placeholder="20 ml">
-      <input type="text" name="numberFeedings" placeholder="3">
-      <input type="text" name="notes" placeholder="doing great today">
-      <input type="text" name="medicalNotes" placeholder="gave meds">
-      <input type="submit" value="add">
-    </form>
+    <div id="myModal" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">How did ${name} do today?</h4>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <label for="date">date</label>
+                <input type="date" class="form-control" name="date" placeholder="05/10/2017">
+              </div>
+              <div class="form-group">
+                <label for="age">age</label>
+                <input type="text" class="form-control" name="age" placeholder="6 weeks">
+              </div>
+              <div class="form-group">
+                <label for="weight">weight(grams)</label>
+                <input type="text" class="form-control" name="weight" placeholder="700g">
+              </div>
+              <div class="form-group">
+                <label for="milk">milk(ml)</label>
+                <input type="text" class="form-control" name="milk" placeholder="20 ml">
+              </div>
+              <div class="form-group">
+                <label for="numberFeedings">number of feedings</label>
+                <input type="text" class="form-control" name="numberFeedings" placeholder="3">
+              </div>
+              <div class="form-group">
+                <label for="notes">notes</label>
+                <textarea class="form-control" rows="4" name="notes" placeholder="doing great today"></textarea>
+              </div>
+              <div class="form-group">
+                <label for="medicalNotes">medical notes</label>
+                <textarea class="form-control" rows="4" name="medicalNotes" placeholder="gave all meds"></textarea>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary">add info</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- CHART FOR GROWTH: -->
     <table>
