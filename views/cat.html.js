@@ -10,6 +10,7 @@ exports.cat = (name) => `
   </head>
 
   <body>
+    <a href="/">Home</a>
     <!-- INTRODUCTION INFO: -->
     <img src="" alt="cat ${name}">
     <h1>I'm ${name}</h1>
