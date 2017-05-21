@@ -4,10 +4,21 @@ var app = express();
 var {home} = require('./views/home.html.js');
 var {cat} = require('./views/cat.html.js');
 
+class CatStorage {
+  constructor() {
+  }
+  getCatNames(){
+    return [{name:'Pigwidgeon', path:'/cat/pigwidgeon'},
+    {name:'Errol', path:'/cat/errol'},
+    {name:'Hedwig', path:'/cat/hedwig'}];
+  }
+}
+const catStore = new CatStorage();
+
 app.use('/styles', express.static(__dirname + '/styles'));
 
 app.get('/', function (req, res) {
-  res.end(home());
+  res.end(home(catStore.getCatNames()));
 });
 
 app.get('/cat/:name', function (req, res) {

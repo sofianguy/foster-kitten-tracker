@@ -1,4 +1,10 @@
-exports.home = () => `
+exports.home = (cats) => {
+  let catLinks = ''
+  for (var i=0; i<cats.length; i++) {
+    catLinks = catLinks + `<a href=${cats[i].path}>${cats[i].name}</a> \n`
+  }
+
+  return `
   <!DOCTYPE html>
   <html>
   <head>
@@ -12,9 +18,7 @@ exports.home = () => `
   <body>
     <h1>Welcome!</h1>
     <h1>pick a kitten:</h1>
-    <a href="/cat/hedwig">Hedwig</a>
-    <a href="/cat/pigwidgeon">Pigwidgeon</a>
-    <a href="/cat/errol">Errol</a>
+    ${catLinks}
   </body>
-  </html>
-`
+  </html>`
+}
