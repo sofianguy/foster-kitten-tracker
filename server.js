@@ -8,9 +8,9 @@ class CatStorage {
   constructor() {
   }
   getCatNames(){
-    return [{name:'Pigwidgeon', path:'/cat/pigwidgeon'},
-    {name:'Errol', path:'/cat/errol'},
-    {name:'Hedwig', path:'/cat/hedwig'}];
+    return [{name:'Pigwidgeon', path:'/cat/pigwidgeon', image:'http://content.mycutegraphics.com/graphics/cats/cat-mouse-yarn.png'},
+    {name:'Errol', path:'/cat/errol', image:'http://content.mycutegraphics.com/graphics/cats/cat-mouse-yarn.png'},
+    {name:'Hedwig', path:'/cat/hedwig', image:'http://content.mycutegraphics.com/graphics/cats/cat-mouse-yarn.png'}];
   }
   getCatInfo(catName){
     return [{date:'05/10/2017', age:'6', weight:700, milk: 'n/a', feedings:3, notes:'n/a', medicalNotes:'gave meds'},

@@ -1,7 +1,10 @@
 exports.home = (cats) => {
   let catLinks = ''
   for (var i=0; i<cats.length; i++) {
-    catLinks = catLinks + `<a href=${cats[i].path}>${cats[i].name}</a> \n`
+    catLinks = catLinks +
+      ` <img src="${cats[i].image}" alt="${cats[i].name} cat"> \n
+        <a href=${cats[i].path}>${cats[i].name}</a>
+      `
   }
 
   return `

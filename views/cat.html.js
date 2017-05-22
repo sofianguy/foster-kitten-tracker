@@ -27,7 +27,7 @@ exports.cat = (catName, catInfo) => {
   <body>
     <a href="/">Home</a>
     <!-- INTRODUCTION INFO: -->
-    <img src="" alt="cat ${catName}">
+    <img src="" alt="${catName} cat">
     <h1>I'm ${catName}</h1>
 
     <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Add new info</button>
