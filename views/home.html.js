@@ -2,8 +2,14 @@ exports.home = (cats) => {
   let catLinks = ''
   for (var i=0; i<cats.length; i++) {
     catLinks = catLinks +
-      ` <img src="${cats[i].image}" alt="${cats[i].name} cat"> \n
-        <a href=${cats[i].path}>${cats[i].name}</a>
+      ` <div class="col-lg-2 col-md-2 col-sm-3 col-xs-4">
+          <div class="thumbnail">
+            <img class="image-click" src="${cats[i].image}" alt="${cats[i].name} cat">
+            <div class="caption">
+              <a href=${cats[i].path}>${cats[i].name}</a>
+            </div>
+          </div>
+        </div>
       `
   }
 
@@ -21,7 +27,11 @@ exports.home = (cats) => {
   <body>
     <h1>Welcome!</h1>
     <h1>pick a kitten:</h1>
-    ${catLinks}
+
+    <div class="row">
+      ${catLinks}
+    </div>
+
   </body>
   </html>`
 }
