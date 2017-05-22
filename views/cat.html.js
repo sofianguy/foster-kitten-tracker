@@ -1,8 +1,14 @@
-exports.cat = (name) => `
+exports.cat = (catName, catInfo) => {
+  let catData = '';
+  for (var i=0; i<catInfo.length; i++) {
+    
+  }
+
+  return `
   <!DOCTYPE html>
   <html>
   <head>
-    <title>${name}</title>
+    <title>${catName}</title>
     <link rel="stylesheet" type="text/css" href="/styles/main.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -12,8 +18,8 @@ exports.cat = (name) => `
   <body>
     <a href="/">Home</a>
     <!-- INTRODUCTION INFO: -->
-    <img src="" alt="cat ${name}">
-    <h1>I'm ${name}</h1>
+    <img src="" alt="cat ${catName}">
+    <h1>I'm ${catName}</h1>
 
     <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Add new info</button>
     <!-- FORM TO ADD GROWTH INFO: -->
@@ -22,7 +28,7 @@ exports.cat = (name) => `
         <div class="modal-content">
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal">&times;</button>
-            <h4 class="modal-title">How did ${name} do today?</h4>
+            <h4 class="modal-title">How did ${catName} do today?</h4>
           </div>
           <div class="modal-body">
             <form>
@@ -97,3 +103,4 @@ exports.cat = (name) => `
   </body>
   </html>
 `
+}

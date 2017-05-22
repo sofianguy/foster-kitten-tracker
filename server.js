@@ -12,6 +12,11 @@ class CatStorage {
     {name:'Errol', path:'/cat/errol'},
     {name:'Hedwig', path:'/cat/hedwig'}];
   }
+  getCatInfo(catName){
+    return [{date:'05/10/2017', age:'6 weeks', weight:700, milk: null, feedings:3, notes:null, medicalNotes:'gave meds'},
+    {date:'05/11/2017', age:'6 weeks', weight:710, milk: null, feedings:3, notes:null, medicalNotes:'gave meds'}
+    ]
+  }
 }
 const catStore = new CatStorage();
 
@@ -23,7 +28,7 @@ app.get('/', function (req, res) {
 
 app.get('/cat/:name', function (req, res) {
   var name = req.params.name;
-  res.send(cat(name));
+  res.send(cat(name, catStore.getCatInfo(name)));
 });
 
 app.listen(3000, function () {
