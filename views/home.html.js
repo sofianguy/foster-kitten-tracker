@@ -24,7 +24,7 @@ exports.home = (cats) => {
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   </head>
 
-  <body>
+  <body id="home-page-body">
     <h1>Welcome!</h1>
     <h1>pick a kitten:</h1>
 

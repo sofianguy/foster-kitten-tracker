@@ -1,3 +1,7 @@
+#home-page-body {
+    padding: 15px;
+}
+
 table, th, td {
     border: 1px solid black;
     border-collapse: collapse;
