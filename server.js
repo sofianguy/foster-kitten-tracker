@@ -6,16 +6,49 @@ var {cat} = require('./views/cat.html.js');
 
 class CatStorage {
   constructor() {
+    this.data = {
+      cats: [
+        {
+          info: {name:'pigwidgeon', path:'/cat/pigwidgeon', image:'http://content.mycutegraphics.com/graphics/cats/cat-mouse-yarn.png'},
+          growth: [
+            {date:'05/10/2017', age:'6', weight:750, milk: 'n/a', feedings:3, notes:'n/a', medicalNotes:'gave meds'},
+            {date:'05/11/2017', age:'6', weight:760, milk: 'n/a', feedings:3, notes:'n/a', medicalNotes:'gave meds'}
+          ]
+        },
+        {
+          info: {name:'errol', path:'/cat/errol', image:'http://content.mycutegraphics.com/graphics/cats/cat-mouse-yarn.png'},
+          growth: [
+            {date:'05/10/2017', age:'6', weight:800, milk: 'n/a', feedings:3, notes:'n/a', medicalNotes:'gave meds'},
+            {date:'05/11/2017', age:'6', weight:810, milk: 'n/a', feedings:3, notes:'n/a', medicalNotes:'gave meds'}
+          ]
+        },
+        {
+          info: {name:'hedwig', path:'/cat/hedwig', image:'http://i.imgur.com/HKQjnXzm.jpg'},
+          growth: [
+            {date:'05/10/2017', age:'6', weight:700, milk: 'n/a', feedings:3, notes:'n/a', medicalNotes:'gave meds'},
+            {date:'05/11/2017', age:'6', weight:710, milk: 'n/a', feedings:3, notes:'n/a', medicalNotes:'gave meds'}
+          ]
+        }
+      ]
+    }
   }
   getCatNames(){
-    return [{name:'Pigwidgeon', path:'/cat/pigwidgeon', image:'http://content.mycutegraphics.com/graphics/cats/cat-mouse-yarn.png'},
-    {name:'Errol', path:'/cat/errol', image:'http://content.mycutegraphics.com/graphics/cats/cat-mouse-yarn.png'},
-    {name:'Hedwig', path:'/cat/hedwig', image:'http://i.imgur.com/HKQjnXzm.jpg'}];
+    let out = []
+    for(let i=0; i<this.data.cats.length; i++) {
+      let cat = this.data.cats[i];
+      out.push(cat.info);
+    }
+    return out;
   }
   getCatInfo(catName){
-    return [{date:'05/10/2017', age:'6', weight:700, milk: 'n/a', feedings:3, notes:'n/a', medicalNotes:'gave meds'},
-    {date:'05/11/2017', age:'6', weight:710, milk: 'n/a', feedings:3, notes:'n/a', medicalNotes:'gave meds'}
-    ]
+    let out;
+    for (let i=0; i<this.data.cats.length; i++) {
+      let cat = this.data.cats[i];
+      if (cat.info.name === catName) {
+        out = cat.growth;
+      }
+    }
+    return out;
   }
 }
 const catStore = new CatStorage();
