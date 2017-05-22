@@ -1,7 +1,16 @@
 exports.cat = (catName, catInfo) => {
   let catData = '';
   for (var i=0; i<catInfo.length; i++) {
-    
+    catData = catData +
+      `<tr>
+        <td>${catInfo[i].date}</td>
+        <td>${catInfo[i].age} weeks</td>
+        <td>${catInfo[i].weight} g</td>
+        <td>${catInfo[i].milk}</td>
+        <td>${catInfo[i].feedings}</td>
+        <td>${catInfo[i].notes}</td>
+        <td>${catInfo[i].medicalNotes}</td>
+      `
   }
 
   return `
@@ -81,24 +90,7 @@ exports.cat = (catName, catInfo) => {
         <th>notes</th>
         <th>medical notes</th>
       </tr>
-      <tr>
-        <td>05/10/2017</td>
-        <td>6 weeks</td>
-        <td>700g</td>
-        <td>n/a</td>
-        <td>3</td>
-        <td></td>
-        <td>gave meds</td>
-      </tr>
-      <tr>
-        <td>05/11/2017</td>
-        <td>6 weeks</td>
-        <td>710g</td>
-        <td>n/a</td>
-        <td>3</td>
-        <td></td>
-        <td>gave meds</td>
-      </tr>
+      ${catData}
     </table>
   </body>
   </html>

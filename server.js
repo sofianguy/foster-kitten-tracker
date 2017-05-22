@@ -13,8 +13,8 @@ class CatStorage {
     {name:'Hedwig', path:'/cat/hedwig'}];
   }
   getCatInfo(catName){
-    return [{date:'05/10/2017', age:'6 weeks', weight:700, milk: null, feedings:3, notes:null, medicalNotes:'gave meds'},
-    {date:'05/11/2017', age:'6 weeks', weight:710, milk: null, feedings:3, notes:null, medicalNotes:'gave meds'}
+    return [{date:'05/10/2017', age:'6', weight:700, milk: 'n/a', feedings:3, notes:'n/a', medicalNotes:'gave meds'},
+    {date:'05/11/2017', age:'6', weight:710, milk: 'n/a', feedings:3, notes:'n/a', medicalNotes:'gave meds'}
     ]
   }
 }
