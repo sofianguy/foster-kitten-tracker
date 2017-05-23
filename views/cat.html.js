@@ -25,12 +25,27 @@ exports.cat = (catName, catInfo) => {
   </head>
 
   <body id="cat-page-body">
-    <a href="/">Home</a>
+    <!-- nav bar -->
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/"><span class="glyphicon glyphicon-home"></span></a>
+        </div>
+      </div>
+    </nav>
+
     <!-- INTRODUCTION INFO: -->
     <img src="${catInfo.info.image}" alt="${catName} cat">
     <h1>I'm ${catName}</h1>
 
     <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Add new info</button>
+
     <!-- FORM TO ADD GROWTH INFO: -->
     <div id="myModal" class="modal fade" role="dialog">
       <div class="modal-dialog">
