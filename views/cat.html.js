@@ -1,5 +1,4 @@
 exports.cat = (catName, catInfo) => {
-  console.log(catInfo)
   let catData = '';
   for (var i=0; i<catInfo.growth.length; i++) {
     catData = catData +
@@ -25,7 +24,7 @@ exports.cat = (catName, catInfo) => {
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   </head>
 
-  <body>
+  <body id="cat-page-body">
     <a href="/">Home</a>
     <!-- INTRODUCTION INFO: -->
     <img src="${catInfo.info.image}" alt="${catName} cat">
