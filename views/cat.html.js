@@ -1,15 +1,16 @@
 exports.cat = (catName, catInfo) => {
+  console.log(catInfo)
   let catData = '';
-  for (var i=0; i<catInfo.length; i++) {
+  for (var i=0; i<catInfo.growth.length; i++) {
     catData = catData +
       `<tr>
-        <td>${catInfo[i].date}</td>
-        <td>${catInfo[i].age} weeks</td>
-        <td>${catInfo[i].weight} g</td>
-        <td>${catInfo[i].milk}</td>
-        <td>${catInfo[i].feedings}</td>
-        <td>${catInfo[i].notes}</td>
-        <td>${catInfo[i].medicalNotes}</td>
+        <td>${catInfo.growth[i].date}</td>
+        <td>${catInfo.growth[i].age} weeks</td>
+        <td>${catInfo.growth[i].weight} g</td>
+        <td>${catInfo.growth[i].milk}</td>
+        <td>${catInfo.growth[i].feedings}</td>
+        <td>${catInfo.growth[i].notes}</td>
+        <td>${catInfo.growth[i].medicalNotes}</td>
       `
   }
 
@@ -27,7 +28,7 @@ exports.cat = (catName, catInfo) => {
   <body>
     <a href="/">Home</a>
     <!-- INTRODUCTION INFO: -->
-    <img src="" alt="${catName} cat">
+    <img src="${catInfo.info.image}" alt="${catName} cat">
     <h1>I'm ${catName}</h1>
 
     <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Add new info</button>

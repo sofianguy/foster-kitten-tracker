@@ -42,10 +42,9 @@ class CatStorage {
   }
   getCatInfo(catName){
     let out;
-    for (let i=0; i<this.data.cats.length; i++) {
-      let cat = this.data.cats[i];
+    for(let cat of this.data.cats) {
       if (cat.info.name === catName) {
-        out = cat.growth;
+        out = cat;
       }
     }
     return out;
