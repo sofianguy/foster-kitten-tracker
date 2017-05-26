@@ -147,7 +147,7 @@ exports.cat = (catName, catInfo) => {
     <!-- CHART FOR GROWTH: -->
     <table>
       <tr>
-        <th>edit</th>
+        <th></th>
         <th>date</th>
         <th>age</th>
         <th>weight(grams)</th>
