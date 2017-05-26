@@ -3,7 +3,7 @@ exports.cat = (catName, catInfo) => {
   for (var i=0; i<catInfo.growth.length; i++) {
     catData = catData +
       `<tr>
-        <td><button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#edit-growth-modal">edit</button></td>
+        <td><button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#edit-growth-modal-${i}">edit</button></td>
         <td>${catInfo.growth[i].date}</td>
         <td>${catInfo.growth[i].age} weeks</td>
         <td>${catInfo.growth[i].weight} g</td>
@@ -13,7 +13,7 @@ exports.cat = (catName, catInfo) => {
         <td>${catInfo.growth[i].medicalNotes}</td>
       </tr>
 
-      <div id="edit-growth-modal" class="modal fade" role="dialog">
+      <div id="edit-growth-modal-${i}" class="modal fade" role="dialog">
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
