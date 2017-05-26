@@ -3,6 +3,7 @@ exports.cat = (catName, catInfo) => {
   for (var i=0; i<catInfo.growth.length; i++) {
     catData = catData +
       `<tr>
+        <td><button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#edit-growth-modal">edit</button></td>
         <td>${catInfo.growth[i].date}</td>
         <td>${catInfo.growth[i].age} weeks</td>
         <td>${catInfo.growth[i].weight} g</td>
@@ -10,6 +11,55 @@ exports.cat = (catName, catInfo) => {
         <td>${catInfo.growth[i].feedings}</td>
         <td>${catInfo.growth[i].notes}</td>
         <td>${catInfo.growth[i].medicalNotes}</td>
+      </tr>
+
+      <div id="edit-growth-modal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">${catInfo.growth[i].date} growth info</h4>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="form-group">
+                  <label for="date">date</label>
+                  <input type="date" class="form-control" name="date" value="${catInfo.growth[i].date}">
+                </div>
+                <div class="form-group">
+                  <label for="age">age</label>
+                  <input type="text" class="form-control" name="age" value="${catInfo.growth[i].age} weeks">
+                </div>
+                <div class="form-group">
+                  <label for="weight">weight(grams)</label>
+                  <input type="text" class="form-control" name="weight" value="${catInfo.growth[i].weight} g">
+                </div>
+                <div class="form-group">
+                  <label for="milk">milk(ml)</label>
+                  <input type="text" class="form-control" name="milk" value="${catInfo.growth[i].milk}">
+                </div>
+                <div class="form-group">
+                  <label for="numberFeedings">number of feedings</label>
+                  <input type="text" class="form-control" name="numberFeedings" value="${catInfo.growth[i].feedings}">
+                </div>
+                <div class="form-group">
+                  <label for="notes">notes</label>
+                  <textarea class="form-control" rows="4" name="notes">${catInfo.growth[i].notes}</textarea>
+                </div>
+                <div class="form-group">
+                  <label for="medicalNotes">medical notes</label>
+                  <textarea class="form-control" rows="4" name="medicalNotes">${catInfo.growth[i].medicalNotes}</textarea>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary">save</button>
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
       `
   }
 
@@ -44,10 +94,10 @@ exports.cat = (catName, catInfo) => {
     <img src="${catInfo.info.image}" alt="${catName} cat">
     <h1>I'm ${catName}</h1>
 
-    <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Add new info</button>
+    <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#add-growth-modal">Add new info</button>
 
     <!-- FORM TO ADD GROWTH INFO: -->
-    <div id="myModal" class="modal fade" role="dialog">
+    <div id="add-growth-modal" class="modal fade" role="dialog">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
@@ -97,6 +147,7 @@ exports.cat = (catName, catInfo) => {
     <!-- CHART FOR GROWTH: -->
     <table>
       <tr>
+        <th>edit</th>
         <th>date</th>
         <th>age</th>
         <th>weight(grams)</th>
