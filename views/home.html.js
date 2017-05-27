@@ -4,10 +4,12 @@ exports.home = (cats) => {
     catLinks = catLinks +
       ` <div class="col-lg-2 col-md-2 col-sm-3 col-xs-4">
           <div class="thumbnail">
-            <a href=${cats[i].path}>
-              <img class="home-page-image" src="${cats[i].image}" alt="${cats[i].name} cat">
-            </a>
-            <div class="caption">
+            <div class="img-wrapper">
+              <a href=${cats[i].path}>
+                <img class="img-thumbnail" src="${cats[i].image}" alt="${cats[i].name} cat">
+              </a>
+            </div>
+            <div class="home-page-caption">
               <a href=${cats[i].path}>${cats[i].name}</a>
             </div>
           </div>
