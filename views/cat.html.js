@@ -148,19 +148,21 @@ exports.cat = (catName, catInfo) => {
     </div>
 
     <!-- CHART FOR GROWTH: -->
-    <table>
-      <tr>
-        <th></th>
-        <th>date</th>
-        <th>age</th>
-        <th>weight(grams)</th>
-        <th>milk(ml)</th>
-        <th>approx number of feedings</th>
-        <th>notes</th>
-        <th>medical notes</th>
-      </tr>
-      ${catData}
-    </table>
+    <div class="container">
+      <table class="table table-hover">
+        <tr>
+          <th></th>
+          <th>date</th>
+          <th>age</th>
+          <th>weight(grams)</th>
+          <th>milk(ml)</th>
+          <th>approx number of feedings</th>
+          <th>notes</th>
+          <th>medical notes</th>
+        </tr>
+        ${catData}
+      </table>
+    </div>
   </body>
   </html>
 `
