@@ -150,17 +150,21 @@ exports.cat = (catName, catInfo) => {
     <!-- CHART FOR GROWTH: -->
     <div class="container">
       <table class="table table-hover">
-        <tr>
-          <th></th>
-          <th>date</th>
-          <th>age</th>
-          <th>weight(grams)</th>
-          <th>milk(ml)</th>
-          <th>approx number of feedings</th>
-          <th>notes</th>
-          <th>medical notes</th>
-        </tr>
-        ${catData}
+        <thead>
+          <tr>
+            <th></th>
+            <th>date</th>
+            <th>age</th>
+            <th>weight(grams)</th>
+            <th>milk(ml)</th>
+            <th>approx number of feedings</th>
+            <th>notes</th>
+            <th>medical notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          ${catData}
+        </tbody>
       </table>
     </div>
   </body>
