@@ -29,9 +29,14 @@ exports.home = (cats) => {
   </head>
 
   <body id="home-page-body">
-    <h1>Welcome!</h1>
-    <h1>pick a kitten:</h1>
-
+    <div class="container">
+      <div class="page-header">
+        <h1>Track your kitten</h1>
+      </div>
+      <h3>pick a kitten:</h3>
+      <button type="button" class="btn btn-primary">add a kitten</button>
+    </div>
+    
     <div class="row">
       ${catLinks}
     </div>
