@@ -4,8 +4,8 @@ exports.cat = (catName, catInfo) => {
     catData = catData +
       `<tr>
         <td>
-          <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#edit-growth-modal-${i}">edit</button>
-          <button type="button" class="btn btn-info btn-lg">delete</button>
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#edit-growth-modal-${i}">edit</button>
+          <button type="button" class="btn btn-danger">delete</button>
         </td>
         <td>${catInfo.growth[i].date}</td>
         <td>${catInfo.growth[i].age} weeks</td>
