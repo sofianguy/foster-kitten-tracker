@@ -9,21 +9,21 @@ class CatStorage {
     this.data = {
       cats: [
         {
-          info: {name:'pigwidgeon', path:'/cat/pigwidgeon', image:'https://i.imgur.com/ea7WXND.jpg'},
+          info: {name:'pigwidgeon', path:'/cat/Pigwidgeon', image:'https://i.imgur.com/ea7WXNDm.jpg'},
           growth: [
             {date:'05/10/2017', age:'6', weight:750, milk: 'n/a', feedings:3, notes:'n/a', medicalNotes:'gave meds'},
             {date:'05/11/2017', age:'6', weight:760, milk: 'n/a', feedings:3, notes:'n/a', medicalNotes:'gave meds'}
           ]
         },
         {
-          info: {name:'errol', path:'/cat/errol', image:'https://i.imgur.com/VcXX9Pv.jpg'},
+          info: {name:'errol', path:'/cat/Errol', image:'https://i.imgur.com/VcXX9Pvm.jpg'},
           growth: [
             {date:'05/10/2017', age:'6', weight:800, milk: 'n/a', feedings:3, notes:'n/a', medicalNotes:'gave meds'},
             {date:'05/11/2017', age:'6', weight:810, milk: 'n/a', feedings:3, notes:'n/a', medicalNotes:'gave meds'}
           ]
         },
         {
-          info: {name:'hedwig', path:'/cat/hedwig', image:'http://i.imgur.com/HKQjnXzm.jpg'},
+          info: {name:'hedwig', path:'/cat/Hedwig', image:'http://i.imgur.com/HKQjnXzm.jpg'},
           growth: [
             {date:'05/10/2017', age:'6', weight:700, milk: 'n/a', feedings:3, notes:'n/a', medicalNotes:'gave meds'},
             {date:'05/11/2017', age:'6', weight:710, milk: 'n/a', feedings:3, notes:'n/a', medicalNotes:'gave meds'}

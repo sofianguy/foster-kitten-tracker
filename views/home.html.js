@@ -6,7 +6,7 @@ exports.home = (cats) => {
           <div class="thumbnail">
             <div class="img-wrapper">
               <a href=${cats[i].path}>
-                <img height="800" width="600" class=" img-thumbnail" src="${cats[i].image}" alt="${cats[i].name} cat">
+                <img class=" img-thumbnail" src="${cats[i].image}" alt="${cats[i].name} cat">
               </a>
             </div>
             <div class="home-page-caption">

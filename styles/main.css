@@ -17,6 +17,7 @@
 
 .thumbnail img{
   max-width: 100%; /* do not stretch the bootstrap column */
+  max-height: 100%;
 }
 
 .img-wrapper{
