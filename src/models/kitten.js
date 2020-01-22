@@ -4,6 +4,14 @@ const kitten = (sequelize, DataTypes) => {
         type: DataTypes.STRING,
         unique: true,
       },
+      name: {
+        type: DataTypes.STRING,
+        unique: false,
+      },
+      photo: {
+        type: DataTypes.STRING,
+        unique: true
+      }
     });
     return Kitten;
   };
