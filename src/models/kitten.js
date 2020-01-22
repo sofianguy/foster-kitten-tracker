@@ -1,7 +1,7 @@
 const kitten = (sequelize, DataTypes) => {
     const Kitten = sequelize.define('kitten', {
       kittenid: {
-        type: DataTypes.STRING,
+        type: DataTypes.INTEGER,
         unique: true,
       },
       name: {
@@ -9,7 +9,7 @@ const kitten = (sequelize, DataTypes) => {
         unique: false,
       },
       photo: {
-        type: DataTypes.STRING,
+        type: DataTypes.TEXT,
         unique: true
       }
     });
